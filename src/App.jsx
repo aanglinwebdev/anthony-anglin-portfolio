@@ -1,6 +1,6 @@
 import "./styles/styles.css";
 
-import Header from "./components/header";
+import Header from "./components/Header";
 import About from "./components/about";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
