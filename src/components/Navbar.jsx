@@ -13,6 +13,7 @@ function Navbar() {
     <nav className={styles.navbar}>
 
       <h2 className={styles.logo}>Anthony</h2>
+      <p>A frontend developer building modern web experiences.</p>
 
       <button
         className={styles.hamburger}
