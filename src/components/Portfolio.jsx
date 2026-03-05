@@ -7,14 +7,14 @@ function Portfolio() {
     <section id="portfolio">
 
       <h2>Portfolio</h2>
-
+    <div className="portfolio-grid">
       {projectsData.map((project) => (
         <ProjectCard
           key={project.id}
           project={project}
         />
       ))}
-
+    </div>  
     </section>
   );
 }
