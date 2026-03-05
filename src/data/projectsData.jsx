@@ -5,8 +5,8 @@ const projectsData = [
     description: "Personal portfolio built with React and Vite.",
     tech: "React, JavaScript, CSS",
     image: "/images/portfolio.png",
-    github: "https://github.com/yourgithub/portfolio",
-    live: "https://yourportfolio.vercel.app"
+    github: "https://github.com/aanglinwebdev/anthony-anglin-portfolio",
+    live: "https://anthony-anglin-portfolio.vercel.app"
   },
   {
     id: 2,
