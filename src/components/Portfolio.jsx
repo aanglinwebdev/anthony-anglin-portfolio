@@ -1,22 +1,19 @@
-import Card from "./Card";
-import portfolioData from "../data/portfolioData";
-import styles from "./Portfolio.module.css";
-
+import projectsData from "../data/projectsData";
+import ProjectCard from "./ProjectCard";
 
 function Portfolio() {
 
   return (
-    <section id = "portfolio" className={styles.section}>
+    <section id="portfolio">
 
       <h2>Portfolio</h2>
-    <div className={styles.grid}>
-      {portfolioData.map(item => (
-        <Card
-          key={item.id}
-          project={item}
+
+      {projectsData.map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
         />
       ))}
-      </div>
 
     </section>
   );

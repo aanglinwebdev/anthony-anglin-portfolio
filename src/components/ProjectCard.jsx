@@ -1,8 +1,4 @@
-
-import styles from "./Card.module.css";
-
-function Card(props) {
-
+function ProjectCard({ project }) {
   return (
     <div style={{
       border: "1px solid #ccc",
@@ -11,25 +7,25 @@ function Card(props) {
     }}>
 
       <img
-        src={props.image}
-        alt={props.title}
+        src={project.image}
+        alt={project.title}
         style={{ width: "100%", marginBottom: "10px" }}
       />
 
-      <h3>{props.title}</h3>
+      <h3>{project.title}</h3>
 
-      <p>{props.description}</p>
+      <p>{project.description}</p>
 
       <p><strong>Tech:</strong> {project.tech}</p>
 
       <div style={{ marginTop: "10px" }}>
-        <a href={props.github} target="_blank">
+        <a href={project.github} target="_blank">
           GitHub
         </a>
 
         {" | "}
 
-        <a href={props.live} target="_blank">
+        <a href={project.live} target="_blank">
           Live Demo
         </a>
       </div>
@@ -38,5 +34,4 @@ function Card(props) {
   );
 }
 
-
-export default Card;
+export default ProjectCard;
