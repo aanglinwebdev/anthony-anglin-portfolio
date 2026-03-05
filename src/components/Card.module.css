@@ -1,27 +1,40 @@
+/* ProjectCard.module.css */
 .card {
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
-  transition: transform 0.2s ease;
-  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.image {
+.card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.title {
-  margin-bottom: 8px;
-  font-size: 18px;
+.card h3 {
+  margin: 10px 0 5px;
 }
 
-.description {
-  color: #555;
+.card p {
+  margin: 5px 0;
 }
+
+.card .links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #0070f3;
+  transition: color 0.2s;
+}
+
+.card .links a:hover {
+  color: #0051a3;
+}
+
