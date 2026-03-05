@@ -1,4 +1,12 @@
 function Hero() {
+
+    function handleViewWork() {
+    const portfolioSection = document.getElementById("portfolio");
+
+    portfolioSection.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
   return (
     <section style={{ padding: "60px 20px", textAlign: "center" }}>
       <h1>Hi, I'm Anthony Anglin</h1>
@@ -9,7 +17,7 @@ function Hero() {
         and modern web technologies.
       </p>
 
-      <button style={{ marginTop: "20px", padding: "10px 20px" }}>
+      <button onClick={handleViewWork} style={{ marginTop: "20px", padding: "10px 20px" }}>
         View My Work
       </button>
     </section>
