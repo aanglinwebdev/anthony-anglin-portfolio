@@ -1,22 +1,21 @@
 const portfolioData = [
-  {
+   {
     id: 1,
-    title: "E-Commerce Website",
-    description: "Online store built with React.",
-    image: "https://via.placeholder.com/300"
+    title: "Portfolio Website",
+    description: "Personal portfolio built with React and Vite.",
+    tech: "React, JavaScript, CSS",
+    image: "/images/portfolio.png",
+    github: "https://github.com/aanglinwebdev/anthony-anglin-portfolio",
+    live: "https://anthony-anglin-portfolio-git-main-aanglinwebdevs-projects.vercel.app/"
   },
   {
     id: 2,
-    title: "Business Landing Page",
-    description: "Modern responsive landing page.",
-    image: "https://via.placeholder.com/300"
-  },
-  {
-    id: 3,
-    title: "Dashboard App",
-    description: "Analytics dashboard with charts.",
-    image: "https://via.placeholder.com/300"
+    title: "Task Manager App",
+    description: "A simple task management application.",
+    tech: "React, JavaScript",
+    image: "/images/tasks.png",
+    github: "https://github.com/yourgithub/tasks",
+    live: "#"
   }
 ];
-
 export default portfolioData;

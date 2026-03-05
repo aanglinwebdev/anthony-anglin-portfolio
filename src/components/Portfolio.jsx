@@ -13,9 +13,7 @@ function Portfolio() {
       {portfolioData.map(item => (
         <Card
           key={item.id}
-          title={item.title}
-          description={item.description}
-          image={item.image}
+          project={item}
         />
       ))}
       </div>
