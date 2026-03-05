@@ -5,6 +5,8 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 
 
 
@@ -14,10 +16,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Header />
-
+      <Hero />
+      {/* <Header /> */}
       <About />
-
       <Services />
       <Portfolio />
       
