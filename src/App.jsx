@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Contact from "./components/Contact";
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Services />
       <Portfolio />
+      <Contact /> {/* New */}
       
       {/* Portfolio
       <section>
