@@ -60,7 +60,9 @@ function Contact() {
 
       {submitted && <p style={{ color: "green" }}>Thank you! Your message has been sent.</p>}
 
-      <form onSubmit={handleSubmit} noValidate>
+      <form action="https://formspree.io/f/xdaweakp"
+            method="POST"
+            onSubmit={handleSubmit}>
         <div>
         <FormInput
         label="Name"
