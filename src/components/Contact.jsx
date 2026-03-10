@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormInput from "./FormInput";
 
 function Contact() {
   // Controlled form state
@@ -61,27 +62,23 @@ function Contact() {
 
       <form onSubmit={handleSubmit} noValidate>
         <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
-        </div>
+        <FormInput
+        label="Name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        error={errors.name}
+        />
 
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+        <FormInput
+        label="Email"
+        name="email"
+        type="email"
+        value={formData.email}
+        onChange={handleChange}
+        error={errors.email}
+        />
         </div>
-
         <div>
           <label>Message</label>
           <textarea
