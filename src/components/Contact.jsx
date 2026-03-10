@@ -47,6 +47,8 @@ function Contact() {
     }
 
     setErrors({});
+    // submit form to Formspree
+    e.target.submit();
     console.log("Form submitted:", formData);
 
     // Reset form after submission
