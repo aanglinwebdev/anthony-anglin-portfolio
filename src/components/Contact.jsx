@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormInput from "./FormInput";
+import styles from "./Contact.module.css";
 
 function Contact() {
   // Controlled form state
@@ -57,7 +58,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" style={{ padding: "60px 20px", maxWidth: "600px", margin: "0 auto" }}>
+    <section id="contact" className={styles.contactSection}>
       <h2>Contact Me</h2>
 
       {submitted && <p style={{ color: "green" }}>Thank you! Your message has been sent.</p>}
@@ -65,7 +66,7 @@ function Contact() {
       <form action="https://formspree.io/f/xdaweakp"
             method="POST"
             onSubmit={handleSubmit}>
-        <div>
+        <div className={styles.formGroup}>
         <FormInput
         label="Name"
         name="name"
@@ -73,7 +74,8 @@ function Contact() {
         onChange={handleChange}
         error={errors.name}
         />
-
+        </div>
+        <div className={styles.formGroup}>
         <FormInput
         label="Email"
         name="email"
@@ -83,7 +85,7 @@ function Contact() {
         error={errors.email}
         />
         </div>
-        <div>
+        <div className={styles.formGroup}>
           <label>Message</label>
           <textarea
             name="message"
@@ -93,7 +95,7 @@ function Contact() {
           {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
         </div>
 
-        <button type="submit" style={{ marginTop: "20px", padding: "10px 20px" }}>
+        <button type="submit" className={styles.submitBtn}>
           Send
         </button>
       </form>
