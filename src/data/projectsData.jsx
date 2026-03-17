@@ -1,4 +1,4 @@
-const projectsData = [
+export const projects = [
   {
     id: 1,
     title: "Portfolio Website",
@@ -19,4 +19,4 @@ const projectsData = [
   }
 ];
 
-export default projectsData;
+

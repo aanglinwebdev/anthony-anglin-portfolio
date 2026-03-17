@@ -1,4 +1,4 @@
-import projectsData from "../data/projectsData";
+import {projects} from "../data/projectsData";
 import ProjectCard from "./ProjectCard";
 
 function Portfolio() {
@@ -8,7 +8,7 @@ function Portfolio() {
 
       <h2>Portfolio</h2>
     <div className="portfolio-grid">
-      {projectsData.map((project) => (
+      {projects.map((project) => (
         <ProjectCard
           key={project.id}
           project={project}
