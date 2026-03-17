@@ -1,45 +1,26 @@
-import "./styles/styles.css";
-
-import Header from "./components/Header";
-import About from "./components/About";
-import Services from "./components/Services";
-import Portfolio from "./components/Portfolio";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Contact from "./components/Contact";
-
-
-
-
-
+import Home from "./pages/Home";
+import ContactsPage from "./pages/ContactsPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      {/* <Header /> */}
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact /> {/* New */}
-      
-      {/* Portfolio
-      <section>
-        <h2>Portfolio</h2>
-        <p>Project 1</p>
-        <p>Project 2</p>
-      </section> */}
 
-      {/* Contact */}
-      <section>
-        <h2>Contact</h2>
-        <p>Email: your@email.com</p>
-      </section>
+      <Routes>
 
-    </div>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/about" element={<AboutPage />} />
+
+        <Route path="/contact" element={<ContactsPage />} />
+
+      </Routes>
+
+    </>
   );
 }
 
 export default App;
-

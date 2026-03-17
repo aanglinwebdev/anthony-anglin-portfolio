@@ -1,29 +1,60 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function toggleMenu() {
+  const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className={styles.navbar}>
 
-      <button
-        className={styles.hamburger}
+      <div className={styles.logo}>
+        <Link to="/">Anthony Anglin</Link>
+      </div>
+
+      <div
+        className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}
         onClick={toggleMenu}
       >
-        ☰
-      </button>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-      <ul className={`${styles.navLinks} ${menuOpen ? styles.active : ""}`}>
-        <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-        <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-        <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
-        <li><a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a></li>
+      <ul
+        className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}
+      >
+        <li>
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/about" onClick={closeMenu}>
+            About
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/projects" onClick={closeMenu}>
+            Projects
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
     </nav>
@@ -31,4 +62,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
