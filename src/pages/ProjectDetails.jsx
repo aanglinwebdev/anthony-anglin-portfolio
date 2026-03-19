@@ -1,55 +1,65 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projectsData";
+import "./ProjectDetails.module.css";
 
 function ProjectDetails() {
   const { id } = useParams();
 
-console.log("URL ID:", id);
-console.log("Projects:", projects);
-console.log("Params:", useParams());
-
-
-  const project = projects.find((p) => p.id === Number(id));
+  // Convert id to number to match your data
+  const project = projects.find(
+    (p) => p.id === Number(id)
+  );
 
   if (!project) {
     return <h2>Project not found</h2>;
   }
 
   return (
-    <section style={{ padding: "40px", maxWidth: "900px", margin: "0 auto" }}>
-      
-      <h1>{project.title}</h1>
+    <div className="page">
+    <section className="project-details">
 
+      {/* Back Button */}
+      <Link to="/projects">
+        <button className="btn secondary">← Back to Projects</button>
+      </Link>
+
+      {/* Title */}
+      <h1 className="project-title">{project.title}</h1>
+
+      {/* Image */}
       <img
         src={project.image}
         alt={project.title}
-        style={{
-          width: "100%",
-          borderRadius: "10px",
-          margin: "20px 0"
-        }}
+        className="project-image"
       />
 
-      <p>{project.description}</p>
+      {/* Description */}
+      <p className="project-description">
+        {project.description}
+      </p>
 
-      <h3>Tech Stack</h3>
-      <ul>
+      {/* Tech Stack */}
+      <div className="tech-stack">
         {project.tech.map((tech, index) => (
-          <li key={index}>{tech}</li>
+          <span key={index} className="tech-badge">
+            {tech}
+          </span>
         ))}
-      </ul>
+      </div>
 
-      <div style={{ marginTop: "20px" }}>
+      {/* Buttons */}
+      <div className="project-buttons">
         <a href={project.live} target="_blank" rel="noreferrer">
-          <button style={{ marginRight: "10px" }}>Live Demo</button>
+          <button className="btn primary">Live Demo</button>
         </a>
 
         <a href={project.github} target="_blank" rel="noreferrer">
-          <button>GitHub</button>
+          <button className="btn secondary">GitHub</button>
         </a>
       </div>
 
     </section>
+    </div>
   );
 }
 

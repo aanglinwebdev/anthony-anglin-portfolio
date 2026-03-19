@@ -1,6 +1,7 @@
 function AboutPage() {
   return (
-    <section style={{ padding: "40px", maxWidth: "800px", margin: "0 auto" }}>
+    <div className="page">
+    <section className="container">
       
       <h1>About Me</h1>
 
@@ -30,6 +31,7 @@ function AboutPage() {
       </p>
 
     </section>
+    </div>
   );
 }
 
